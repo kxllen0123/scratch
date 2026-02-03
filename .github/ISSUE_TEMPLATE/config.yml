@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/your-org/code-sentinel/wiki
+    about: 查看项目文档和使用指南
+  - name: 💬 Discussions
+    url: https://github.com/your-org/code-sentinel/discussions
+    about: 提问、分享想法或参与讨论
+  - name: 🔒 Security Issue
+    url: https://github.com/your-org/code-sentinel/security/advisories/new
+    about: 报告安全漏洞（请勿公开）
