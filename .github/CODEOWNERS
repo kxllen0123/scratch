@@ -1,0 +1,38 @@
+# Code Owners for Code-Sentinel Project
+# 
+# 这个文件定义了代码库中不同部分的所有者
+# 当创建 PR 时，相应的所有者会自动被添加为审查者
+#
+# 格式: path/to/file @username
+
+# 默认所有者 - 适用于所有未明确指定的文件
+# * @your-username
+
+# API 相关
+/apps/api/ @your-username
+
+# Web 前端相关（未来）
+# /apps/web/ @your-username
+
+# 共享类型定义
+/packages/types/ @your-username
+
+# 基础设施和部署
+/.github/workflows/ @your-username
+/apps/api/Dockerfile @your-username
+/apps/api/docker-compose.yml @your-username
+
+# 文档
+*.md @your-username
+
+# 配置文件
+/.github/ @your-username
+.gitignore @your-username
+.dockerignore @your-username
+
+# 依赖管理
+/apps/api/requirements.txt @your-username
+/apps/api/pyproject.toml @your-username
+
+# 数据和评测集
+/data/ @your-username

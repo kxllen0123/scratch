@@ -44,6 +44,44 @@
 ### 共享
 - **类型定义**: TypeScript
 
+## 快速开始
+
+1. **克隆仓库**
+   ```bash
+   git clone https://github.com/your-org/code-sentinel.git
+   cd code-sentinel
+   ```
+
+2. **设置后端**
+   ```bash
+   cd apps/api
+   make install
+   make dev
+   ```
+
+3. **设置前端**
+   ```bash
+   cd apps/web
+   bun install
+   bun dev
+   ```
+
+4. **运行测试**
+   ```bash
+   # API
+   cd apps/api && make test-local
+   
+   # Web
+   cd apps/web && bun test
+   ```
+
+## 文档
+
+- [项目约束与规范](.kiro/steering/project-constraints.md)
+- [GitHub Actions 配置](.github/SETUP.md)
+- [API 文档](apps/api/README.md)
+- [CI/CD 配置说明](docs/CI_CD_SETUP.md)
+
 ## 开发指南
 
 ### 前端开发
@@ -62,7 +100,43 @@ uv pip install -r requirements.txt
 uv run main.py
 ```
 
+### 使用 Docker
+```bash
+cd apps/api
+make build    # 构建镜像
+make run      # 运行容器
+make logs     # 查看日志
+make stop     # 停止容器
+```
+
+### 运行测试
+```bash
+# API 测试
+cd apps/api
+make test-local
+
+# Web 测试
+cd apps/web
+bun test
+```
+
+## CI/CD
+
+项目使用 GitHub Actions 实现持续集成流程：
+
+- ✅ 自动化测试和代码质量检查
+- ✅ 安全扫描（依赖漏洞 + 代码安全）
+- ✅ Docker 镜像构建和测试
+- ✅ Dependabot 自动依赖更新
+
+详细信息请查看：
+- [GitHub Actions 配置指南](.github/SETUP.md)
+- [Workflows 文档](.github/workflows/README.md)
+- [快速参考](.github/QUICK_REFERENCE.md)
+
 ## 部署
 
-- **前端**: 自动部署到 Vercel
-- **后端**: 通过 Docker 容器部署到 AWS
+- **前端**: 将来部署到 Vercel
+- **后端**: 将来通过 Docker 容器部署到 AWS ECS
+
+> 注：部署配置将在后续添加

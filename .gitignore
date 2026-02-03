@@ -29,6 +29,7 @@ venv/
 env/
 ENV/
 .venv
+uv.lock
 
 # Next.js
 apps/web/.next/
@@ -44,6 +45,9 @@ coverage/
 *.coverage
 .pytest_cache/
 .coverage.*
+htmlcov/
+coverage.xml
+.hypothesis/
 
 # Environment variables
 .env
