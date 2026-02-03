@@ -1,6 +1,6 @@
 # Multi-stage Dockerfile for Code-Sentinel API
 # Stage 1: Builder - Install dependencies
-FROM python:3.11-slim AS builder
+FROM python:3.14-slim AS builder
 
 # Set working directory
 WORKDIR /app
@@ -17,7 +17,7 @@ RUN uv venv /opt/venv && \
     uv pip install --no-cache -r requirements.txt
 
 # Stage 2: Runtime - Minimal production image
-FROM python:3.11-slim
+FROM python:3.14-slim
 
 # Set working directory
 WORKDIR /app
