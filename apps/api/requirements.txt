@@ -6,7 +6,7 @@ uvicorn[standard]==0.41.0
 pydantic==2.12.5
 
 # Testing frameworks
-pytest==8.3.3
+pytest==9.0.2
 pytest-cov==5.0.0
 pytest-asyncio==0.24.0
 
